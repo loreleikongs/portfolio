@@ -161,15 +161,19 @@ footer {
 
 .headshot {
   width: 160px;
+  max-width: 40vw;
   height: 160px;
+  max-height: 40vw;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ddd;
 }
 
-.headshot:hover {
-  transform: scale(1.03);
-  transition: 0.2s;
+@media (max-width: 600px) {
+  .headshot {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 nav {
