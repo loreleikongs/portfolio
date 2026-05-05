@@ -6,6 +6,7 @@ body {
   color: #222;
 }
 
+/* ===== HEADER ===== */
 header {
   background: #111;
   color: white;
@@ -18,11 +19,15 @@ header {
   opacity: 0.8;
 }
 
+/* ===== NAV ===== */
 nav {
   background: white;
   padding: 15px;
   text-align: center;
   border-bottom: 1px solid #ddd;
+
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 nav a {
@@ -36,6 +41,21 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* mobile nav scroll behavior */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  nav a {
+    flex-shrink: 0;
+  }
+}
+
+/* ===== MAIN LAYOUT ===== */
 main {
   max-width: 900px;
   margin: auto;
@@ -47,11 +67,13 @@ h2 {
   font-size: 1.6rem;
 }
 
+/* ===== ABOUT TEXT ===== */
 .about p {
   line-height: 1.6;
   font-size: 1.05rem;
 }
 
+/* ===== HOME GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -70,6 +92,7 @@ h2 {
   }
 }
 
+/* ===== CARDS ===== */
 .card {
   background: white;
   padding: 20px;
@@ -87,6 +110,7 @@ h2 {
   border-color: #111;
 }
 
+/* ===== WRITING LISTS ===== */
 .work-list {
   list-style: none;
   padding: 0;
@@ -125,14 +149,7 @@ h2 {
   opacity: 0.75;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111;
-  color: white;
-  margin-top: 50px;
-}
-
+/* ===== PHOTO GRID ===== */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -154,42 +171,36 @@ footer {
   border-color: #111;
 }
 
+/* ===== HEADSHOT ===== */
 .headshot-section {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .headshot {
-  width: 160px;
-  max-width: 40vw;
-  height: 160px;
-  max-height: 40vw;
+  width: 140px;
+  height: 140px;
+  max-width: 140px;
+  max-height: 140px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ddd;
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
   .headshot {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 
-nav {
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-@media (max-width: 600px) {
-  nav {
-    display: flex;
-    gap: 12px;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-
-  nav a {
-    flex-shrink: 0;
-  }
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: white;
+  margin-top: 50px;
 }
