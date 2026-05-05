@@ -6,13 +6,21 @@ body {
   color: #222;
 }
 
-/* ===== HOME HEADER (profile style) ===== */
-.hero-header {
+header {
   background: #111;
   color: white;
   padding: 55px 20px;
+  text-align: center;
 }
 
+/* HOMEPAGE HERO HEADER */
+.hero-header {
+  background: #111;
+  color: white;
+  padding: 55px 20px; /* SAME HEIGHT AS OTHER HEADERS */
+}
+
+/* inner layout ONLY for homepage */
 .header-content {
   display: flex;
   align-items: center;
@@ -39,7 +47,7 @@ body {
   opacity: 0.8;
 }
 
-/* mobile header layout */
+/* mobile homepage header */
 @media (max-width: 600px) {
   .header-content {
     flex-direction: column;
@@ -51,20 +59,6 @@ body {
     height: 70px;
   }
 }
-
-/* ===== NORMAL PAGE HEADERS (THIS FIXES YOUR ISSUE) ===== */
-header {
-  background: #111;
-  color: white;
-  padding: 55px 20px;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-
 
 /* ===== NAV ===== */
 nav {
