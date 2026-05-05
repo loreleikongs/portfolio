@@ -6,30 +6,51 @@ body {
   color: #222;
 }
 
-/* ===== HEADER (with profile pic) ===== */
 .hero-header {
   background: #111;
   color: white;
-  padding: 45px 20px;
-  text-align: center;
+  padding: 25px 20px;
 }
 
+/* container that aligns image + text horizontally */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* small profile picture */
 .header-pfp {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
-  margin-bottom: 12px;
 }
 
-.hero-header h1 {
-  margin: 5px 0;
+/* text alignment */
+.header-text h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.subtitle {
-  font-size: 1.1rem;
+.header-text .subtitle {
+  margin: 2px 0 0 0;
+  font-size: 0.95rem;
   opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-pfp {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 /* ===== NAV ===== */
