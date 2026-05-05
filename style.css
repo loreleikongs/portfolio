@@ -10,7 +10,7 @@ body {
 .hero-header {
   background: #111;
   color: white;
-  padding: 25px 20px;
+  padding: 55px 20px;
 }
 
 .header-content {
@@ -35,7 +35,7 @@ body {
 
 .header-text .subtitle {
   margin: 2px 0 0 0;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   opacity: 0.8;
 }
 
