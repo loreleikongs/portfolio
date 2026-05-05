@@ -6,13 +6,13 @@ body {
   color: #222;
 }
 
+/* ===== HOME HEADER (profile style) ===== */
 .hero-header {
   background: #111;
   color: white;
   padding: 25px 20px;
 }
 
-/* container that aligns image + text horizontally */
 .header-content {
   display: flex;
   align-items: center;
@@ -20,7 +20,6 @@ body {
   gap: 15px;
 }
 
-/* small profile picture */
 .header-pfp {
   width: 60px;
   height: 60px;
@@ -29,7 +28,6 @@ body {
   border: 2px solid white;
 }
 
-/* text alignment */
 .header-text h1 {
   margin: 0;
   font-size: 1.5rem;
@@ -41,6 +39,7 @@ body {
   opacity: 0.8;
 }
 
+/* mobile header layout */
 @media (max-width: 600px) {
   .header-content {
     flex-direction: column;
@@ -51,6 +50,23 @@ body {
     width: 70px;
     height: 70px;
   }
+}
+
+/* ===== NORMAL PAGE HEADERS (THIS FIXES YOUR ISSUE) ===== */
+header {
+  background: #111;
+  color: white;
+  padding: 55px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.8;
 }
 
 /* ===== NAV ===== */
@@ -86,11 +102,6 @@ nav a:hover {
 
   nav a {
     flex-shrink: 0;
-  }
-
-  .header-pfp {
-    width: 75px;
-    height: 75px;
   }
 }
 
