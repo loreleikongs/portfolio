@@ -13,26 +13,28 @@ header {
   text-align: center;
 }
 
-/* HOMEPAGE HERO HEADER */
+/* HOMEPAGE HEADER */
 .hero-header {
   background: #111;
   color: white;
   padding: 55px 20px;
-  text-align: center; /* IMPORTANT: forces same visual baseline */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* KEY FIX: makes height match normal header visually */
+  min-height: 140px;
 }
 
-/* inner layout */
+/* inner content layout */
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 15px;
-
-  /* KEY FIX: prevents "compressed look" */
-  min-height: 90px;
 }
 
-/* profile image */
+/* profile pic */
 .header-pfp {
   width: 60px;
   height: 60px;
@@ -42,22 +44,31 @@ header {
 }
 
 /* text block */
+.header-text {
+  text-align: left;
+}
+
 .header-text h1 {
   margin: 0;
   font-size: 1.5rem;
 }
 
 .header-text .subtitle {
-  margin: 2px 0 0 0;
+  margin: 4px 0 0 0;
   font-size: 1.1rem;
   opacity: 0.8;
 }
 
 /* mobile fix */
 @media (max-width: 600px) {
-  .header-content {
+  .hero-header {
     flex-direction: column;
-    min-height: unset; /* prevents weird compression */
+    min-height: 0;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
   }
 
   .header-pfp {
