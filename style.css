@@ -6,12 +6,25 @@ body {
   color: #222;
 }
 
-/* ===== HEADER ===== */
-header {
+/* ===== HEADER (with profile pic) ===== */
+.hero-header {
   background: #111;
   color: white;
-  padding: 55px 20px;
+  padding: 45px 20px;
   text-align: center;
+}
+
+.header-pfp {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 12px;
+}
+
+.hero-header h1 {
+  margin: 5px 0;
 }
 
 .subtitle {
@@ -41,7 +54,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* mobile nav scroll behavior */
+/* mobile nav scroll */
 @media (max-width: 600px) {
   nav {
     display: flex;
@@ -53,9 +66,14 @@ nav a:hover {
   nav a {
     flex-shrink: 0;
   }
+
+  .header-pfp {
+    width: 75px;
+    height: 75px;
+  }
 }
 
-/* ===== MAIN LAYOUT ===== */
+/* ===== MAIN ===== */
 main {
   max-width: 900px;
   margin: auto;
@@ -110,7 +128,7 @@ h2 {
   border-color: #111;
 }
 
-/* ===== WRITING LISTS ===== */
+/* ===== WRITING LIST ===== */
 .work-list {
   list-style: none;
   padding: 0;
@@ -169,31 +187,6 @@ h2 {
 .photo-grid img:hover {
   transform: scale(1.03);
   border-color: #111;
-}
-
-/* ===== HEADSHOT ===== */
-.headshot-section {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.headshot {
-  width: 140px;
-  height: 140px;
-  max-width: 140px;
-  max-height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  display: block;
-  margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-  .headshot {
-    width: 110px;
-    height: 110px;
-  }
 }
 
 /* ===== FOOTER ===== */
