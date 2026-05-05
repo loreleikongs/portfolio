@@ -17,17 +17,22 @@ header {
 .hero-header {
   background: #111;
   color: white;
-  padding: 55px 20px; /* SAME HEIGHT AS OTHER HEADERS */
+  padding: 55px 20px;
+  text-align: center; /* IMPORTANT: forces same visual baseline */
 }
 
-/* inner layout ONLY for homepage */
+/* inner layout */
 .header-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+
+  /* KEY FIX: prevents "compressed look" */
+  min-height: 90px;
 }
 
+/* profile image */
 .header-pfp {
   width: 60px;
   height: 60px;
@@ -36,6 +41,7 @@ header {
   border: 2px solid white;
 }
 
+/* text block */
 .header-text h1 {
   margin: 0;
   font-size: 1.5rem;
@@ -47,11 +53,11 @@ header {
   opacity: 0.8;
 }
 
-/* mobile homepage header */
+/* mobile fix */
 @media (max-width: 600px) {
   .header-content {
     flex-direction: column;
-    text-align: center;
+    min-height: unset; /* prevents weird compression */
   }
 
   .header-pfp {
