@@ -195,3 +195,12 @@ footer {
   border: 2px solid white;
   flex-shrink: 0 !important;
 }
+
+.header-pfp {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 2px solid white;
+  display: block;
+}
