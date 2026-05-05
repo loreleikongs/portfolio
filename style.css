@@ -6,6 +6,7 @@ body {
   color: #222;
 }
 
+/* Base header style for ALL pages */
 header {
   background: #111;
   color: white;
@@ -13,69 +14,14 @@ header {
   text-align: center;
 }
 
-/* HOMEPAGE HEADER */
-.hero-header {
-  background: #111;
-  color: white;
-  padding: 55px 20px;
-
+/* Homepage-specific layout (keeps your headshot + text side-by-side) */
+.hero-header .header-content {
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  /* KEY FIX: makes height match normal header visually */
-  min-height: 140px;
-}
-
-/* inner content layout */
-.header-content {
-  display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* profile pic */
-.header-pfp {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-/* text block */
-.header-text {
-  text-align: left;
-}
-
-.header-text h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.header-text .subtitle {
-  margin: 4px 0 0 0;
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-
-/* mobile fix */
-@media (max-width: 600px) {
-  .hero-header {
-    flex-direction: column;
-    min-height: 0;
-    text-align: center;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .header-pfp {
-    width: 70px;
-    height: 70px;
-  }
-}
 
 /* ===== NAV ===== */
 nav {
